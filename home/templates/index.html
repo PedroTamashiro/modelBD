@@ -1,0 +1,26 @@
+<style>
+    table, th, td {
+        border: 1px solid black;
+        text-align: center;
+    }
+</style>
+
+<table>
+    <h1>Tabela Atividade</h1>
+    <tr>
+        <th>ATIVIDADE ID</th>
+        <th>ULTIMA MOVIMENTAÇÃO</th>
+        <th>TAG ID</th>
+        <th>USER ID VENDEDOR</th>
+        <th>USER ID ADM</th>
+    </tr>
+    {% for item in dados %}
+    <tr> 
+        <td>{{ item.ATIVIDADE_ID }}</td>
+        <td>{{ item.ULTIMA_MOVIMENTACAO|date:"d/m/Y" }}</td>
+        <td>{{ item.TAG_ID}}</td>
+        <td>{{ item.USER_ID_VENDEDOR}}</td>
+        <td>{{ item.USER_ID_ADM}}</td>
+    </tr>
+    {% endfor %}
+</table>
